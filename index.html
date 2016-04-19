@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Skeleton3d-matlab by phi-max</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Skeleton3d-matlab</h1>
+        <p class="header"></p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/phi-max/skeleton3d-matlab/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/phi-max/skeleton3d-matlab/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/phi-max/skeleton3d-matlab">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/phi-max">phi-max</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="skeleton3d-parallel-medial-axis-thinning-of-a-3d-binary-volume" class="anchor" href="#skeleton3d-parallel-medial-axis-thinning-of-a-3d-binary-volume" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Skeleton3D: Parallel medial axis thinning of a 3D binary volume</h1>
+
+<p>This code calculates the 3D medial axis skeleton of an arbitrary 3d binary volume. It is an optimized MATLAB implementation of the homotopic thinning algorithm described in [1]. We developed it to quantify the network of cell processes in bone [2], but it should work on images of any tubular or filamentous structures. An example volume (testvol.mat) is included, along with an example script (Test_Skeleton3D.m). Any comments, corrections or suggestions are highly welcome.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage:</h2>
+
+<p><code>skel = Skeleton3D(bin)</code></p>
+
+<p>where "bin" is a 3D binary image, and "skel" the resulting image containing only the skeleton voxels, or</p>
+
+<p><code>skel = Skeleton3D(bin,mask)</code></p>
+
+<p>to mask all foreground voxels in 'mask' from skeletonization, e.g. to preserve certain structures in a image volume.</p>
+
+<p>For additional cleanup, e.g. pruning of short branches, please use my Skel2Graph3D package on MATLAB File Exchange.</p>
+
+<p>This code is inspired by the ITK implementation by Hanno Homann [3] and the Fiji/ImageJ plugin by Ignacio Arganda-Carreras [4]. If you include this in your own work, please cite our original publicaton [2].</p>
+
+<p>Philip Kollmannsberger 09/2013
+<a href="mailto:philipk@gmx.net">philipk@gmx.net</a></p>
+
+<p>References:</p>
+
+<p>[1] Ta-Chih Lee, Rangasami L. Kashyap and Chong-Nam Chu
+"Building skeleton models via 3-D medial surface/axis thinning algorithms."
+Computer Vision, Graphics, and Image Processing, 56(6):462–478, 1994.</p>
+
+<p>[2] Kerschnitzki, Kollmannsberger et al.,
+"Architecture of the osteocyte network correlates with bone material quality."
+Journal of Bone and Mineral Research, 28(8):1837-1845, 2013.</p>
+
+<p>[3] <a href="http://hdl.handle.net/1926/1292">http://hdl.handle.net/1926/1292</a></p>
+
+<p>[4] <a href="http://fiji.sc/wiki/index.php/Skeletonize3D">http://fiji.sc/wiki/index.php/Skeletonize3D</a></p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
