@@ -1,5 +1,7 @@
 function LUT = FillEulerLUT
 
+LUT = zeros(255,1, 'int8');
+
 LUT(1)  =  1;
 LUT(3)  = -1;
 LUT(5)  = -1;
@@ -132,3 +134,4 @@ LUT(249) =  3;
 LUT(251) =  1;
 LUT(253) =  1;
 LUT(255) = -1;
+end
