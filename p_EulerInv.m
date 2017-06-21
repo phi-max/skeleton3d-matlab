@@ -83,4 +83,7 @@ n(img(:,5)==1) = bitor(n(img(:,5)==1),4);
 n(img(:,15)==1) = bitor(n(img(:,15)==1),2);
 eulerChar = eulerChar + LUT(n);
 
+EulerInv = false(size(eulerChar), 'like', img);
 EulerInv(eulerChar==0) = true;
+
+end
