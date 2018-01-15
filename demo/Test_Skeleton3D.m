@@ -1,6 +1,6 @@
 clearvars;
 close all;
-addpath('..');
+addpath(fullfile(fileparts(mfilename('fullpath')), '..'));
 load testvol
 
 skel = Skeleton3D(testvol);
