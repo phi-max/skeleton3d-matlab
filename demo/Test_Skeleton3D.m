@@ -1,6 +1,6 @@
-clear all;
+clearvars;
 close all;
-
+addpath('..');
 load testvol
 
 skel = Skeleton3D(testvol);
