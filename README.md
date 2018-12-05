@@ -14,7 +14,7 @@ to mask all foreground voxels in 'mask' from skeletonization, e.g. to preserve c
 
 For additional cleanup, e.g. pruning of short branches, please use my Skel2Graph3D package on MATLAB File Exchange.
 
-This code is inspired by the ITK implementation by Hanno Homann [3] and the Fiji/ImageJ plugin by Ignacio Arganda-Carreras [4]. If you include this in your own work, please cite our original publicaton [2].
+This code is inspired by the ITK implementation by Hanno Homann [3] and the Fiji/ImageJ plugin by Ignacio Arganda-Carreras [4]. If you include this in your own work, please cite our publicaton [2].
 
 Philip Kollmannsberger 09/2013
 philipk@gmx.net
@@ -25,9 +25,9 @@ References:
 "Building skeleton models via 3-D medial surface/axis thinning algorithms."
 Computer Vision, Graphics, and Image Processing, 56(6):462–478, 1994.
 
-[2] Kerschnitzki, Kollmannsberger et al.,
-"Architecture of the osteocyte network correlates with bone material quality."
-Journal of Bone and Mineral Research, 28(8):1837-1845, 2013.
+[2] Kollmannsberger, Kerschnitzki et al.,
+"The small world of osteocytes: connectomics of the lacuno-canalicular network in bone."
+New Journal of Physics 19:073019, 2017.
 
 [3] http://hdl.handle.net/1926/1292
 
