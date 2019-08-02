@@ -122,16 +122,31 @@ while( unchangedBorders < 6 )  % loop until no change for all six border types
 %                 idx = [];
                 
                 % do parallel re-checking for all points in each subvolume
+                % With euler criteria and simple point --> keep topology
                 for i = 1:8                    
                     if any(ilst(i).l)
                         idx = ilst(i).l;
                         li = sub2ind([width height depth],x(idx),y(idx),z(idx));
+                                              
                         skel(li)=0; % remove points
                         nh = pk_get_nh(skel,li);
-                        di_rc = ~p_is_simple(nh);
+                        di_rc_euler = ~p_EulerInv(nh, eulerLUT);
+                        di_rc = ~p_is_simple(nh);                  
+
+                         % Check for the simple plint criteria
+                        no_single_change = true ;
                         if any(di_rc) % if topology changed: revert
                             skel(li(di_rc)) = true;
-                        else
+                            no_single_change = false;
+                        end
+                        
+                        % Check for the euler criteria
+                        if any(di_rc_euler)
+                            skel(li(di_rc_euler)) = true;
+                            no_single_change = false;
+                        end
+               
+                        if no_single_change
                             noChange = false; % at least one voxel removed
                         end
                     end
