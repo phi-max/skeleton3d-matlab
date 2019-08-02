@@ -392,12 +392,6 @@ if( octant==8 )
         cube(idx,:) = p_oct_label(7,label(idx),cube(idx,:));
     end
     
-    idx = cube(:,17) == 1;
-    if any(idx)
-        cube(idx,17) = label(idx);
-        cube(idx,:) = p_oct_label(4,label(idx),cube(idx,:));
-    end
-    
     idx = cube(:,23) == 1;
     if any(idx)
         cube(idx,23) = label(idx);
